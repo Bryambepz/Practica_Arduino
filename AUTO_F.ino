@@ -15,10 +15,10 @@ void setup()
 void loop()
 { 
   
-    
+  while(digitalRead(2)==0){}
+  while(digitalRead(2)==1){}
   for(i; s;)
-  {
-   while(digitalRead(2)==0){}  
+  {    
    digitalWrite(i, 1);
     delay(vs);
    digitalWrite(i, 0);
@@ -37,6 +37,22 @@ void loop()
        s=4;          
        x=-1;          
 	}
-      
+    if(digitalRead(2)==1)
+	{
+          
+       break;       
+	}
+    
   }
+    
+  while(digitalRead(2)==1){
+  for(int l=4; l<=13; l++)
+  {
+  digitalWrite(l, 0);  
   }
+  i=13;
+  s=4;          
+  x=-1;
+  }
+  
+}
